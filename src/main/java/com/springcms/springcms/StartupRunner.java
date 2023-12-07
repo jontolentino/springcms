@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -23,17 +24,19 @@ public class StartupRunner implements CommandLineRunner {
     @Autowired
     public UserService userService;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
     @Override
     public void run(String...args) throws Exception {
         LOG.info("===STARTUP RUNNER===");
-        User startupUser = new User();
-        startupUser.setEmail("jon@gmail.com");
-        startupUser.setPassword("12312");
-        List<String> userRoles = new ArrayList<>();
-        userRoles.add("ROLE_USER");
-        userRoles.add("ROLE_ADMIN");
-        startupUser.setRoles(userRoles);
-        userService.save(startupUser);
+//        User startupUser = new User();
+//        startupUser.setEmail("jon@gmail.com");
+//        startupUser.setPassword(passwordEncoder.encode("12312"));
+//        List<String> userRoles = new ArrayList<>();
+//        userRoles.add("ROLE_USER");
+//        userRoles.add("ROLE_ADMIN");
+//        startupUser.setRoles(userRoles);
+//        userService.save(startupUser);
 
     }
 

@@ -22,6 +22,9 @@ public class UserService {
     public User getUser(String email){
         Optional<User> tempUser = userRepository.findByEmail(email);
 
-        return tempUser.get();
+        if(tempUser.isPresent()){
+            return tempUser.get();
+        }
+        return null;
     }
 }
