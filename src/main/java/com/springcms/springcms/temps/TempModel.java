@@ -1,4 +1,4 @@
-package com.springcms.springcms.model;
+package com.springcms.springcms.temps;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

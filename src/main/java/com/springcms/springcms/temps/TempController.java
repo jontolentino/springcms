@@ -1,4 +1,4 @@
-package com.springcms.springcms.controller;
+package com.springcms.springcms.temps;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
